@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>[Startup]</title>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!--Font Implementation-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">
+      
+      <!--style.css Implementation-->
+      <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body id="top">
+        <div class="overlay" id="overlay"></div>
+
+        <!--Sidebar code-->  
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#top">
+                <img src="img/voltagetech_logo_only_closeup.png" style="width:50px">
+            </a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#review">Reviews</a>
+        </div>
+
+        <div class="top">
+            <h1>    
+                <span style="font-size:30px;cursor:pointer; margin-right:50px" onclick="openNav()">&#9776;</span>
+                [Startup]
+            </h1>   
+        </div>
+
+
+        <!--ALL CONTENT GOES BELOW-->
+        <div class="content">
+
+            <img src="img/filler.png"/ style="width:100%;">
+        
+            <h2 id="about">
+                About
+            </h2>
+            <div class="aboutBox1">
+                <p>
+                    [Startup] is an ambitious startup passion project founded by [Name], a dedicated Sophomore student at [School]. His journey into the world of technology began in 2015 when he discovered his passion for software development and cybersecurity, diving deep into these fascinating fields.
+                    <br><br>
+                    In 2019, amidst the challenges of the global pandemic, [Name] decided to channel his spare time into exploring the hardware aspects of computers. It was during this period that his love for computers reached its zenith. His insatiable curiosity led him to tinker with hardware components, understand their intricacies, and unravel the mysteries of computer architecture.
+                    <br><br>
+                    Driven by his unwavering dedication to his passions, [Name] aspires to share his knowledge and insights with others. [Startup] is his platform to help individuals of all backgrounds venture into the captivating world of computers. [Name] believes that everyone deserves the opportunity to understand and appreciate the marvels of technology.
+                </p>
+            </div>
+            <img src="img/justin-bieber-mugshot.png" style="width:12%; float:left; margin-left:4%; border-radius: 50px;">
+            <div class="aboutBox2">
+                <p>
+                <br><br><br><br>
+                At [Startup], I am committed to demystifying the complexities of technology, providing educational resources, and taking you on an enlightening journey into the heart of the digital realm. Join me, and let's explore the boundless possibilities of computers together.
+                <br>
+                - [Name]
+                </p>
+            </div>
+            
+            <h2 id="contact">
+                Contact Us
+            </h2>
+            <div class="infoBox">
+                <p>
+                    Here at [Startup], we specialize in building and troubleshooting computer systems, and we can craft custom keyboards for a fee of under $100 (prices may vary). We're passionate about providing high-quality hardware advice to help you configure the <b>ULTIMATE</b> system tailored to your needs.
+                    <br><br>  
+                    The choice is yours whether you prefer to visit us or have us come to you. We're here to make your technology experience seamless and enjoyable.
+                    <br><br>  
+                    If you have any questions, need assistance with a project, or simply want to chat about your tech aspirations, don't hesitate to get in touch with [Startup].
+                    <br><br>
+                    <b>Contact Information:</b>
+                    <br>
+                    Phone: [Number]
+                    <br>
+                    Email: [Email]
+                </p>
+            </div>
+            
+            <h2 id="review">
+                Reviews
+            </h2>
+            <div class="infoBox">
+                <div class="pic">
+                    <img src="img/tbd.png"/>
+                </div>
+                
+                <div class="pic">
+                    <img src="img/tbd.png"/>
+                </div>
+                
+                <div class="pic">
+                    <img src="img/tbd.png"/>
+                </div>
+                
+                <div class="pic">
+                    <img src="img/tbd.png"/>
+                </div>
+            </div>
+            <!--Info/Contact Section-->
+            <div class="bottom">
+                <h5>[Location]
+                <br>[Number]
+                <br>[Email]</h5>
+            </div>
+        </div>
+    </body>
+    <script>
+        /**Stuff that makes the sidebar and opacity transition
+        happen.
+        Note: Changed so the content does not get pushed when
+        opening the sidebar.**/
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.classList.add("overlay-active");
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.classList.remove("overlay-active");
+        }
+
+        // Add smooth scrolling behavior to navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</html>
